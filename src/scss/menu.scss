@@ -1,0 +1,91 @@
+//menu
+.menu{
+    position:fixed;
+    left: 88%;
+    width: 12%;
+    height: 100vh;
+    background-color: $whiteColor;
+    text-align: center;
+    @include screenXL{
+      width: 14%;
+      left: 86%;
+    }
+    @include screenM{
+      width: 16%;
+      left: 84%;
+    }
+    ul {
+      margin-top: 25vh;
+      width: auto;
+      height: auto;
+      li{
+        list-style: none;
+        height: 15vh;
+        text-align: center;
+        a{
+          text-decoration: none;
+          border-radius: 15px ;
+          font-size: 150%;
+          color: $grayColor;
+          padding: 10px 30px;
+          transition-property: background-color;
+          transition-duration: .5s;
+          @include screenL{
+            font-size: 130%;
+            padding: 10px 20px;
+          }
+          @include screenM{
+            font-size: 115%;
+            padding: 10px;
+          }
+          @include screenS{
+            font-size: 110%;
+            padding: 10px;
+          }
+        }
+        a:hover{
+          background-color: $grayColor;
+          color: $whiteColor;
+        }
+        .btn1{
+          opacity: 0;
+          animation: fadeIn 2s forwards;
+          animation-delay: .2s;
+        }
+        .btn2{
+          opacity: 0;
+          animation: fadeIn 2s forwards;
+          animation-delay: .4s;
+        }
+        .btn3{
+          opacity: 0;
+          animation: fadeIn 2s forwards;
+          animation-delay: .6s;
+        }
+        .btn4{
+          opacity: 0;
+          animation: fadeIn 2s forwards;
+          animation-delay: .8s;
+        }
+      }
+    }
+  }
+  // toggle MENU
+  .menubtn{
+    margin-top:30px;
+    font-size: 120%;
+  }
+  .toggle-btn{
+    display:none;
+  }
+  @include screenS{
+    .toggle-btn-visible{
+      display: contents;
+    }
+    .toggle-target-hidden{
+      display:none;
+    }
+    .toggle-target-expanded{
+      display:contents;
+    }
+  }
