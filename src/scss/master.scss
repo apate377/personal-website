@@ -1,0 +1,119 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+@import './menu.scss';
+@import './menumobile.scss';
+@import './home.scss';
+@import './profpersonal.scss';
+@import './aboutme.scss';
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  /*border: 3px solid black;*/
+  scroll-behavior: smooth;
+}
+html, body{
+  height: 100%;
+}
+
+//All Gradients and general purpose stuff
+.gradient{
+  width: 2%;
+  height: $grad1Height;
+  float: left;
+  background-image: repeating-linear-gradient(to bottom, #DB5192 0vh, #FFCC57 100vh, #DB5192 200vh);
+}
+.gradient2{
+  width: 2%;
+  position: absolute;
+  left: 86%;
+  @include screenXL{
+    left: 84%;
+  }
+  @include screenM{
+    left: 82%;
+  }
+  top: $grad1Height + $backgroundHeight;
+  height: $softwareElements* $displayHeight;
+  background-image: repeating-linear-gradient(to bottom, #DB5192 0vh, #FFCC57 100vh, #DB5192 200vh);
+  @include screenS{
+    opacity: 0;
+  }
+}
+.gradient3{
+  width: 2%;
+  position: absolute;
+  left: 86%;
+  @include screenXL{
+    left: 84%;
+  }
+  @include screenM{
+    left: 82%;
+  }
+  top: $grad1Height + $backgroundHeight + $softwareElements* $displayHeight + $backgroundHeight;
+  height: $hardwareElements * $displayHeight;
+  background-image: repeating-linear-gradient(to bottom, #DB5192 0vh, #FFCC57 100vh, #DB5192 200vh);
+  @include screenS{
+    opacity: 0;
+  }
+}
+.gradient4{
+  width: 2%;
+  position: absolute;
+  left: 86%;
+  @include screenXL{
+    left: 84%;
+  }
+  @include screenM{
+    left: 82%;
+  }
+  top: $grad1Height + $backgroundHeight + $softwareElements* $displayHeight + $backgroundHeight + $hardwareElements * $displayHeight + $backgroundHeight;
+  height: $aboutmeHeight;
+  background-image: repeating-linear-gradient(to bottom, #DB5192 0vh, #FFCC57 100vh, #DB5192 200vh);
+  @include screenS{
+    opacity: 0;
+  }
+}
+.gradient5{
+  width: 2%;
+  position: absolute;
+  left: 82%;
+  top: 140vh;
+  opacity: 0;
+  height:500vh;
+
+  background-image: repeating-linear-gradient(to bottom, #DB5192 0vh, #FFCC57 100vh, #DB5192 200vh);
+  @include screenS{
+    opacity: 1;
+  }
+}
+.background{
+  width:100%;
+  height: $backgroundHeight;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.background1{
+  background-image: url(../images/background1.png);
+}
+.background2{
+  background-image: url(../images/background2.jpg);
+}
+.background3{
+  background-image: url(../images/background3.jpg);
+}
+
+//ClearFix
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
